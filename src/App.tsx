@@ -182,9 +182,12 @@ const App: React.FC = () => {
         onLogout={handleLogout}
         onLoginClick={() => setIsAuthModalOpen(true)}
         user={user}
+        habits={habits}
+        onToggleHabit={handleToggle}
+        today={today}
       />
 
-      <main className="flex-1 ml-64 p-12 max-w-7xl mx-auto w-full">
+      <main className="flex-1 ml-80 mt-16 p-6 md:p-12 max-w-7xl mx-auto w-full">
         <header className="flex justify-between items-start mb-12">
           <div className="animate-in fade-in slide-in-from-left-4 duration-500">
             <h2 className="text-4xl font-bold mb-2">
@@ -242,24 +245,6 @@ const App: React.FC = () => {
                 }>
                   <ActivityMap habits={habits} />
                 </Suspense>
-
-                <section className="mt-12">
-                  <h3 className="text-xl font-bold mb-6">Today's Focus</h3>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    {habits.length === 0 ? (
-                      <div className="col-span-full py-16 text-center border-2 border-dashed border-white/5 rounded-3xl">
-                        <p className="text-gray-600 mb-4">You haven't tracked anything yet.</p>
-                        <button onClick={handleOpenAddHabit} className="px-6 py-2 bg-white/5 hover:bg-white/10 text-white rounded-xl border border-white/10 transition-all">
-                          {user ? 'Add Your First Habit' : 'Sign In to Start Tracking'}
-                        </button>
-                      </div>
-                    ) : (
-                      habits.map(habit => (
-                        <HabitItem key={habit.id} habit={habit} onToggle={handleToggle} onDelete={handleDelete} onToggleSubtask={handleToggleSubtask} today={today} />
-                      ))
-                    )}
-                  </div>
-                </section>
               </div>
             )}
 
