@@ -312,7 +312,8 @@ const App: React.FC = () => {
                           <div className="flex justify-between items-center p-4 bg-white/5 rounded-2xl border border-white/5">
                             <div>
                               <p className="font-bold">Full Name</p>
-                              <p className="text-sm text-gray-500">{user.name}</p>
+                              <p className="text-sm text-gray-500">{user.name.toUpperCase()}
+</p>
                             </div>
                           </div>
                           <div className="flex justify-between items-center p-4 bg-white/5 rounded-2xl border border-white/5">
