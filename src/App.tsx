@@ -196,7 +196,11 @@ const App: React.FC = () => {
         <header className="flex justify-between items-start mb-12">
           <div className="animate-in fade-in slide-in-from-left-4 duration-500">
             <h2 className="text-4xl font-bold mb-2">
-              {user ? `Welcome, ${user.name.split(' ')[0]}` : 'Start Your Flow'}
+              {user ? `Welcome, ${user.name
+  .split(' ')[0]
+  .charAt(0)
+  .toUpperCase() +
+  user.name.split(' ')[0].slice(1)}` : 'Start Your Flow'}
             </h2>
             <p className="text-gray-400 font-medium tracking-wide">{todayFormatted}</p>
           </div>
@@ -312,7 +316,7 @@ const App: React.FC = () => {
                           <div className="flex justify-between items-center p-4 bg-white/5 rounded-2xl border border-white/5">
                             <div>
                               <p className="font-bold">Full Name</p>
-                              <p className="text-sm text-gray-500">{user.name.toUpperCase()}
+                              <p className="text-sm text-gray-500">{user.name}
 </p>
                             </div>
                           </div>
