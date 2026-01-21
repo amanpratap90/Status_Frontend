@@ -196,11 +196,12 @@ const App: React.FC = () => {
         <header className="flex justify-between items-start mb-12">
           <div className="animate-in fade-in slide-in-from-left-4 duration-500">
             <h2 className="text-4xl font-bold mb-2">
-              {user ? `Welcome, ${user.name
-  .split(' ')[0]
-  .charAt(0)
-  .toUpperCase() +
-  user.name.split(' ')[0].slice(1)}` : 'Start Your Flow'}
+             {user
+  ? `Welcome, ${user.name
+      .split(' ')[0]
+      .replace(/^./, c => c.toUpperCase())}`
+  : 'Start Your Flow'}
+
             </h2>
             <p className="text-gray-400 font-medium tracking-wide">{todayFormatted}</p>
           </div>
