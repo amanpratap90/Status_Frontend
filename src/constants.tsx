@@ -25,4 +25,4 @@ export const NAV_ITEMS = [
   { id: 'settings', label: 'Settings', icon: <Settings size={20} /> },
 ];
 
-export const CATEGORIES = ['Health', 'Work', 'Personal', 'Finance', 'Social'];
+export const CATEGORIES = ['Health', 'Study', 'Personal', 'Finance', 'Social'];
