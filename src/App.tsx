@@ -387,13 +387,13 @@ const App: React.FC = () => {
             <div className="space-y-6">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 ml-1">The Goal</label>
-                <input type="text" value={newHabitName} onChange={(e) => setNewHabitName(e.target.value)} placeholder="e.g. Master React" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-green-500 text-white placeholder-gray-700 text-lg" />
+                <input type="text" value={newHabitName} onChange={(e) => setNewHabitName(e.target.value)} placeholder="Enter Your Task" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-green-500 text-white placeholder-gray-700 text-lg" />
               </div>
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 ml-1">Category</label>
                 <select value={newHabitCategory} onChange={(e) => setNewHabitCategory(e.target.value)} className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-green-500 text-white appearance-none">
                   <option value="Health">Health</option>
-                  <option value="Work">Work</option>
+                  <option value="Study">Study</option>
                   <option value="Personal">Personal</option>
                   <option value="Finance">Finance</option>
                   <option value="Social">Social</option>
