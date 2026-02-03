@@ -5,7 +5,9 @@ import { NOTE_COLORS } from '../constants';
 import { useNotes, useCreateNote, useDeleteNote } from '../hooks/useData';
 
 const NotesSection: React.FC = () => {
-  const { data: notes = [], isLoading } = useNotes();
+  const { data: rawNotes, isLoading } = useNotes();
+  // Safe extraction ensuring array type
+  const notes = Array.isArray(rawNotes) ? rawNotes : [];
   const createNoteMutation = useCreateNote();
   const deleteNoteMutation = useDeleteNote();
 
